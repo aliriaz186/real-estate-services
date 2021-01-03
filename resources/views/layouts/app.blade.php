@@ -74,7 +74,7 @@
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
                 <div class="sidebar-brand">
-                    <a class="navbar-brand" href="{{ url('/') }}">Married Home</a>
+                    <a class="navbar-brand" href="{{ url('/home') }}">The Married Home</a>
                     <div id="close-sidebar">
                         <i class="fas fa-times"></i>
                     </div>
@@ -109,30 +109,24 @@
                         </li>
                         @if(\Illuminate\Support\Facades\Session::get('isAdmin') === true)
                         <li class="">
-                            <a href="{{env('APP_URL')}}/staff">
+                            <a href="{{env('APP_URL')}}/clients">
                                 <i class="fas fa-user"></i>
-                                <span>Staff</span>
+                                <span>Clients</span>
                             </a>
                         </li>
+                            <li class="">
+                                <a href="{{env('APP_URL')}}/professionals">
+                                    <i class="fas fa-user"></i>
+                                    <span>Professionals</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="{{env('APP_URL')}}/all-bookings">
+                                    <i class="fas fa-list-ol"></i>
+                                    <span>Bookings</span>
+                                </a>
+                            </li>
                         @endif
-                        <li class="">
-                            <a href="{{env('APP_URL')}}/customer">
-                                <i class="fas fa-users"></i>
-                                <span>Customer</span>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="{{env('APP_URL')}}/chat">
-                                <i class="fas fa-users"></i>
-                                <span>Chat <span style="color: white;font-size: 12px;background: red;padding: 2px 7px 2px 5px;border-radius: 10px;margin-left: 4px;">{{\App\Chat::where('status', 0)->get()->count()}}</span></span>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="{{env('APP_URL')}}/message-template">
-                                <i class="fas fa-envelope-open"></i>
-                                <span>Messages Templates</span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
                 <!-- sidebar-menu  -->

@@ -70,7 +70,7 @@
             <nav id="navigation" class="navigation navigation-landscape">
                 <div class="nav-header">
                     <a class="nav-brand" href="{{url('')}}">
-                        Married Home
+                        <img src="{{asset('')}}/logo.png" style="height: 60px;width: 100px">
                     </a>
                     <div class="nav-toggle"></div>
                 </div>

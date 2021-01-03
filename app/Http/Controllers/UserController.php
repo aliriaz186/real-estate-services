@@ -1,7 +1,9 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Booking;
 use App\Contactus;
+use App\EmailSignup;
 use App\Http\Controllers\Controller;
 use App\professionalprofile;
 use App\ProfessionalProfileImage;
@@ -222,6 +224,20 @@ class UserController extends Controller
     }
 
     public function professionalDashboard(){
-        return view('professional-dashboard.home');
+        if (empty(Session::get('userId'))){
+            session()->flash('msg', 'Please Login to access Professional Dashboard!');
+            return redirect('');
+        }
+        $professionalId = professionalprofile::where('user_id', Session::get('userId'))->first()['id'];
+        $bookingCount = Booking::where('professional_id', $professionalId)->count();
+        return view('professional-dashboard.home')->with(['bookingCount' => $bookingCount]);
+    }
+
+    public function emailSignup(Request $request){
+        $emailSignup = new EmailSignup();
+        $emailSignup->email = $request->email;
+        $emailSignup->save();
+        session()->flash('msg', 'Thanks! We have got your email, we will send latest information to your email');
+        return redirect()->back();
     }
 }

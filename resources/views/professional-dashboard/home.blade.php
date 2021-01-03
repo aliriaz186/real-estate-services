@@ -15,7 +15,7 @@
                     style="display: flex;flex-grow: 1;flex-direction: column;box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);background-color: #e2e2e257;margin-bottom: 20px;border-radius: 4px;">
                     <div style="padding: 25px;">
                         <h4 class="text-center" style="text-decoration: underline">Total Bookings</h4>
-                        <div class="mb-3"><h1 class="text-center">0+</h1></div>
+                        <div class="mb-3"><h1 class="text-center">{{$bookingCount ?? ''}}+</h1></div>
                         <div class="row" style="padding: 15px;text-align: center;">
                             <div style="margin: 0 auto">
                             </div>

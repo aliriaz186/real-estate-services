@@ -38,7 +38,7 @@
                                 <div class="form-group">
                                     <div class="input-with-icon">
                                         <select class="form-control" name="area">
-                                            <option value="">All Areas</option>
+                                            <option value="">All Areas of Canada</option>
                                             @foreach(\App\Places::all() as $place)
                                                 <option {{$filters->area == $place->place ? 'selected' : ''}} value="{{$place->place}}">{{$place->place}}</option>
                                             @endforeach
@@ -132,7 +132,8 @@
                                         <button class="btn btn-success btn-sm" disabled style="background: #00ba74">Contact</button>
                                     </div>
                                     <div class="col-md-3">
-                                        <button class="btn btn-success btn-sm" disabled style="background: #00ba74">Book Professional</button>
+                                        <a href="{{url('book-professional')}}/{{$professional->id}}" class="btn btn-success btn-sm hover-a"  style="background: #00ba74">Book Professional</a>
+{{--                                        <button class="btn btn-success btn-sm" disabled style="background: #00ba74">Book Professional</button>--}}
                                     </div>
                                 </div>
                             </div>

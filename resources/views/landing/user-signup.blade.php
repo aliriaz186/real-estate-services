@@ -44,7 +44,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
                             <div class="input-with-icon">
-                                <input type="text" class="form-control" placeholder="123 546 5847" name="phone">
+                                <input type="text" class="form-control" placeholder="+123 546 5847" name="phone">
                                 <i class="lni-phone-handset"></i>
                             </div>
                         </div>
@@ -54,8 +54,8 @@
                         <div class="form-group">
                             <div class="input-with-icon">
                                 <select class="form-control" name="userType">
-                                    <option value="customer" selected>As a Customer</option>
-                                    <option value="professional">As a Professional</option>
+                                    <option value="customer" selected>I am a client</option>
+                                    <option value="professional">I am a professional</option>
                                 </select>
                                 <i class="ti-briefcase"></i>
                             </div>

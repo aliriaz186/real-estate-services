@@ -7,7 +7,42 @@
     <title>The Married Home</title>
     <link href="{{asset('assets/css/styles.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/colors.css')}}" rel="stylesheet">
+    <style>
+        .link-btn-class{
 
+        }
+        .custom-btn-logo{
+            background: #CAE7DD;
+            color: black;
+            font-size: 15px;
+            padding: 10px;;
+            border-radius: 5px;
+            border: 1px #CAE7DD;
+            width: 100px;
+            cursor: pointer;
+        }
+        .custom-btn-logo-full-width{
+            background: #CAE7DD;
+            color: black;
+            font-size: 15px;
+            padding: 10px;;
+            border-radius: 5px;
+            border: 1px #CAE7DD;
+            /*width: 100px;*/
+            cursor: pointer;
+        }
+        .hover-a{
+            background: #CAE7DD!important;
+            color: black!important;
+            /*padding: 10px;;*/
+            /*border-radius: 5px;*/
+            /*border: 1px #CAE7DD;*/
+            /*cursor: pointer;*/
+        }
+        .hover-a:hover{
+            color: black!important;
+        }
+    </style>
 </head>
 
 <body class="green-skin">
@@ -22,11 +57,11 @@
             <nav id="navigation" class="navigation navigation-landscape">
                 <div class="nav-header">
                     <a class="nav-brand" href="{{url('')}}">
-                       Married Home
+                       <img src="{{asset('')}}/logo.png" style="height: 80px;width: 200px">
                     </a>
                     <div class="nav-toggle"></div>
                 </div>
-                <div class="nav-menus-wrapper" style="transition-property: none;">
+                <div class="nav-menus-wrapper" style="transition-property: none;margin-top: 20px">
                     <ul class="nav-menu">
 
                         <li><a href="{{url('')}}">Home</a></li>
@@ -37,9 +72,10 @@
                     <ul class="nav-menu nav-menu-social align-to-right">
                         @if(!\Illuminate\Support\Facades\Session::has('userId'))
                         <li>
-                            <a href="{{url('user-login')}}">Signin</a>
+                            <a href="{{url('user-login')}}">Login</a>
                         </li>
-                        <li><a href="{{url('user-signup')}}">Sign Up</a></li>
+                        <li ><a  style="background: #CAE7DD;color: black;padding: 15px;border-radius: 15px" href="{{url('user-signup')}}">Sign up</a></li>
+{{--                        <li><a href="{{url('user-signup')}}">I am professional</a></li>--}}
                         @endif
                         @if(\Illuminate\Support\Facades\Session::has('userId'))
                         <li>

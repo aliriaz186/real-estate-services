@@ -1,6 +1,16 @@
 @extends('layouts.main')
 
 @section('content')
+    @if(\Illuminate\Support\Facades\Session::has('msg'))
+        <div class="alert alert-success" style="margin-bottom: 0px!important;">
+            <h4>{{\Illuminate\Support\Facades\Session::get("msg")}}</h4>
+        </div>
+    @endif
+    @if(\Illuminate\Support\Facades\Session::has('booked'))
+        <div class="alert alert-success" style="margin-bottom: 0px!important;">
+            <h4>You booking is created. Please click <a href="{{url('client-bookings')}}"><strong>here</strong></a> to check status</h4>
+        </div>
+    @endif
     <div class="image-cover hero-banner" style="background:url(assets/img/city.svg) no-repeat;">
         <div class="container">
             <form method="post" action="{{url('/search-result')}}">
@@ -34,7 +44,7 @@
                                 <div class="form-group">
                                     <div class="input-with-icon">
                                         <select class="form-control" name="area">
-                                            <option value="">All Areas</option>
+                                            <option value="">All Areas of Canada</option>
                                             @foreach(\App\Places::all() as $place)
                                                 <option value="{{$place->place}}">{{$place->place}}</option>
                                             @endforeach
@@ -140,7 +150,7 @@
                                         <button class="btn btn-success btn-sm" disabled style="background: #00ba74">Contact</button>
                                     </div>
                                     <div class="col-md-3">
-                                        <button class="btn btn-success btn-sm" disabled style="background: #00ba74">Book Professional</button>
+                                        <a href="{{url('book-professional')}}/{{$user->profile->id}}" class="btn btn-success btn-sm hover-a"  style="background: #00ba74">Book Professional</a>
                                     </div>
                                 </div>
                             </div>
@@ -153,6 +163,39 @@
 
         </div>
     </section>
+
+    <section class="gray">
+        <div class="container">
+
+            <div class="row">
+                <div class="col text-center">
+                    <div class="sec-heading center">
+                        <h2>Email Signup</h2>
+                        <p>Email Signup to get latest updates</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12" style="margin: 0 auto; max-width: 400px">
+                    <form method="post" action="{{url('email-signup')}}">
+                        @csrf
+                        <input type="email" required class="form-control" placeholder="enter email" name="email" >
+                        <br>
+                        <button class="custom-btn-logo" type="submit">Signup</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
 
     <section class="gray">
         <div class="container">

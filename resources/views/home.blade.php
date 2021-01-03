@@ -14,7 +14,7 @@
                         <div
                             style="display: flex;flex-grow: 1;flex-direction: column;box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);background-color: #e2e2e257;margin-bottom: 20px;border-radius: 4px;">
                             <div style="padding: 25px;">
-                                <h4 class="text-center" style="text-decoration: underline">Total Customers</h4>
+                                <h4 class="text-center" style="text-decoration: underline">Total Clients</h4>
                                     <div class="mb-3"><h1 class="text-center">{{$totalCustomers}}+</h1></div>
                                 <div class="row" style="padding: 15px;text-align: center;">
                                     <div style="margin: 0 auto">
@@ -28,8 +28,8 @@
                 <div
                     style="display: flex;flex-grow: 1;flex-direction: column;box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);background-color: #e2e2e257;margin-bottom: 20px;border-radius: 4px;">
                     <div style="padding: 25px;">
-                        <h4 class="text-center" style="text-decoration: underline">Total Staff</h4>
-                        <div class="mb-3"><h1 class="text-center">{{$totalStaff}}+</h1></div>
+                        <h4 class="text-center" style="text-decoration: underline">Total Professionals</h4>
+                        <div class="mb-3"><h1 class="text-center">{{$totalProfessionals}}+</h1></div>
                         <div class="row" style="padding: 15px;text-align: center;">
                             <div style="margin: 0 auto">
                             </div>
@@ -42,8 +42,8 @@
                 <div
                     style="display: flex;flex-grow: 1;flex-direction: column;box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);background-color: #e2e2e257;margin-bottom: 20px;border-radius: 4px;">
                     <div style="padding: 25px;">
-                        <h4 class="text-center" style="text-decoration: underline">Total Chats</h4>
-                        <div class="mb-3"><h1 class="text-center">{{$totalChats}}+</h1></div>
+                        <h4 class="text-center" style="text-decoration: underline">Total Bookings</h4>
+                        <div class="mb-3"><h1 class="text-center">{{$totalBookings}}+</h1></div>
                         <div class="row" style="padding: 15px;text-align: center;">
                             <div style="margin: 0 auto">
                             </div>

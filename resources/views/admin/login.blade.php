@@ -17,7 +17,7 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfb!important">
-    <a class="navbar-brand" href="{{ url('/') }}">Sms App</a>
+    <a class="navbar-brand" href="{{ url('/admin') }}">The Married Home</a>
 {{--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">--}}
 {{--        <span class="navbar-toggler-icon"></span>--}}
 {{--    </button>--}}
@@ -53,7 +53,7 @@
 
         <!-- Remind Passowrd -->
         <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
+{{--            <a class="underlineHover" href="#">Forgot Password?</a>--}}
         </div>
 
     </div>
