@@ -86,8 +86,8 @@
                                 @else
                                     <li><a href="{{url('customer-dashboard')}}">Dashboard</a></li>
                                 @endif
-                                <li><a href="#">Profile</a></li>
-                                <li><a href="#">Favourites</a></li>
+{{--                                <li><a href="#">Profile</a></li>--}}
+{{--                                <li><a href="#">Favourites</a></li>--}}
                                 <li><a href="{{url('user-logout')}}">Logout</a></li>
                             </ul>
                         </li>
@@ -113,7 +113,7 @@
 
                     <div class="col-lg-3 col-md-4">
                         <div class="footer-widget">
-                           <h3 style="color: white">Married Home</h3>
+                           <h3 style="color: white">The Married Home</h3>
                             <div class="footer-add">
                                 <p>Company Address...</p>
                                 <p>+1 246-345-0695</p>

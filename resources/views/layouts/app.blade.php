@@ -102,26 +102,26 @@
                             <span>General</span>
                         </li>
                         <li class="">
-                            <a href="{{env('APP_URL')}}/home">
+                            <a href="{{url('home')}}">
                                 <i class="fa fa-tachometer-alt"></i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         @if(\Illuminate\Support\Facades\Session::get('isAdmin') === true)
                         <li class="">
-                            <a href="{{env('APP_URL')}}/clients">
+                            <a href="{{url('clients')}}">
                                 <i class="fas fa-user"></i>
                                 <span>Clients</span>
                             </a>
                         </li>
                             <li class="">
-                                <a href="{{env('APP_URL')}}/professionals">
+                                <a href="{{url('professionals')}}">
                                     <i class="fas fa-user"></i>
                                     <span>Professionals</span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="{{env('APP_URL')}}/all-bookings">
+                                <a href="{{url('all-bookings')}}">
                                     <i class="fas fa-list-ol"></i>
                                     <span>Bookings</span>
                                 </a>
